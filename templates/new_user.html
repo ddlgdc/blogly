@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New User Form</title>
+</head>
+<body>
+    <h1>Create a New User</h1>
+    <form method="POST" action="{{ url_for('new_user_submitted') }}">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+        <label for="image_url">Image URL (optional):</label>
+        <input type="text" id="image_url" name="image_url"><br>
+        <button type="submit">Create User</button>
+    </form>
+    <a href="{{ url_for('list_of_users') }}">Back to Users List</a>
+</body>
+</html>
